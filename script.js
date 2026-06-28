@@ -93,27 +93,5 @@
     });
   });
 
-  /* ---------- Interactive checklist ---------- */
-  const checkboxes  = document.querySelectorAll('.check-item input[type="checkbox"]');
-  const fillBar     = document.getElementById('checkFill');
-  const statusLabel = document.getElementById('checkStatus');
-
-  function updateChecklist() {
-    const total   = checkboxes.length;
-    const checked = Array.from(checkboxes).filter(c => c.checked).length;
-    const pct     = (checked / total) * 100;
-    if (fillBar)     fillBar.style.width = pct + '%';
-    if (statusLabel) {
-      if (checked === 0) {
-        statusLabel.textContent = 'Cochez ce que vous avez — on s\'adapte au reste.';
-      } else if (checked === total) {
-        statusLabel.textContent = 'Parfait ! Envoyez votre demande, on s\'occupe du reste.';
-      } else {
-        statusLabel.textContent = `${checked} / ${total} éléments prêts`;
-      }
-    }
-  }
-
-  checkboxes.forEach(cb => cb.addEventListener('change', updateChecklist));
 
 })();
