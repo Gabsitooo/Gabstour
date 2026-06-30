@@ -494,6 +494,129 @@ h2.light { color: var(--white); }
   .logo-service { flex-direction: column; }
 }
 
+/* ---------- Example / How it works ---------- */
+.exemple-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.exemple-step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.exemple-num {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .1rem;
+}
+
+.exemple-step strong {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: .25rem;
+}
+
+.exemple-step p {
+  font-size: .875rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+.exemple-case {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.exemple-case-label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 1.25rem;
+}
+
+.exemple-cols {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.exemple-arrow {
+  font-size: 2rem;
+  color: var(--blue);
+  font-weight: 300;
+  padding: 0 .5rem;
+}
+
+.exemple-col-title {
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.exemple-badge {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: .2em .6em;
+}
+
+.exemple-badge--before { background: #e8f0fc; color: var(--blue); }
+.exemple-badge--after  { background: #d1fae5; color: #065f46; }
+
+.exemple-photos {
+  border-radius: calc(var(--radius) - 2px);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.exemple-photos img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.exemple-photos--two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+}
+
+@media (max-width: 768px) {
+  .exemple-steps { grid-template-columns: 1fr; gap: 1rem; }
+  .exemple-cols  { grid-template-columns: 1fr; }
+  .exemple-arrow { display: none; }
+}
+
 /* ---------- Gallery ---------- */
 .gallery-grid {
   display: grid;
